@@ -71,7 +71,7 @@ const handleRequest = async (request) => {
 		var uniform_id = tempData["uniform_id"];
 
 		//检验uniform_id的正确性
-		var patt1 = /^[^:]+:\d+$/;
+		var patt1 = /^[^:]+:[A-Za-z0-9_\-\.]+$/;
 		if (!patt1.test(uniform_id)) {
 			//返回未能通过的信息：uniform_id field did not pass validation
 			return {
